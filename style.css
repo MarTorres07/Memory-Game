@@ -1,0 +1,57 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height: 100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-image: url("./img/keroBack.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+section{
+    
+    margin-top: 4rem;
+    display:grid;
+    grid-template-columns: repeat(4, 8rem);
+    grid-template-rows: repeat(4, 8rem);
+    grid-gap:3rem;
+    perspective:1000px;
+    
+}
+
+.card{
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s ease;
+    cursor: pointer;
+}
+
+
+
+.front,
+.back{
+    width:90%;
+    height: 130%;
+    position:absolute;
+    pointer-events:none;
+    border-radius: 6px;
+}
+
+.back{
+    
+    backface-visibility: hidden;
+}
+
+.toggleCard, .front{
+    transform:rotateY(180deg);
+}
+
+
