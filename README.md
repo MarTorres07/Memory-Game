@@ -1,0 +1,1 @@
+This memory card game is made to practice some basic Javascript!
